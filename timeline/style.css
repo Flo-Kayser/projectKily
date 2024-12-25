@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url("/timeline/components/timeline-container.css");
+
+/* Globale Styles */
+:root {
+    --tCol: #F1F1EF;
+    --t2Col: #282827;
+    --blue: #5d9abb;
+    --red: #B5878E;
+    --green: #B5AE87;
+    --radius: 20px;
+    --transition: 0.5s;
+    --pulse-opacity: 0.8;
+    --pulse-scale: 2;
+    --shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--t2Col);
+    background: color-mix(in srgb, var(--green) 70%, #000 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Hauptcontainer */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wrapper {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: var(--radius);
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    box-shadow: var(--shadow);
+}
+
+
+
+/* Task- und backside-Container */
+.backside,
+.task {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+    /* padding: 20px; */
+    backface-visibility: hidden;
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+/* .task{
+    transform: rotateY(180deg);
+} */
+.backside {
+    transform: rotateY(180deg);
+}
+
+.task {
+    color: var(--t2Col);
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+.task>span:first-child {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.task>span:nth-child(2) {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Pulsierende Schaltfläche */
+.task .pulse {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: var(--transition);
+    cursor: pointer;
+    animation: colorAnimate 8s linear infinite;
+}
+
+@keyframes colorAnimate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.task .pulse>span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    opacity: var(--pulse-opacity);
+    animation: pulseAnimate 4s ease-out infinite;
+    animation-delay: calc(0.8s * var(--i));
+}
+
+@keyframes pulseAnimate {
+    100% {
+        opacity: 0;
+        transform: scale(var(--pulse-scale));
+    }
+}
+
+.task .pulse:hover>span,
+.task .pulse:hover>div {
+    animation-play-state: paused;
+    color: var(--t2Col);
+}
+
+.pulse div {
+    z-index: 2;
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--tCol);
+}
+
+/* backside-Items */
+.item .details img {
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+    pointer-events: none;
+}
+
+.backside>button {
+    position: absolute;
+    bottom: -30px;
+}

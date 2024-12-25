@@ -1,0 +1,4 @@
+task-heading=Die nächste Aufgabe wartet bereits...|
+task=Was ist die Aufgabe? Ganz einfach. Durch euer fortgeschrittenes Alter habt ihr schon so einiges miterlebt. 
+Jetzt ist es Zeit, sich zu erinnern. Ordnet die Geschehnisse nach dem Datum, an dem sie stattgefunden haben, 
+um ein weiteren Lösungsbuchstaben zu ergattern.

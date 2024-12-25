@@ -1,0 +1,46 @@
+.timeline-container{
+    position: relative;
+    background: var(--blue);
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    padding: 20px;
+} 
+
+.stack, .current-card .timeline{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stack{
+    grid-area: 1/1/2/2;
+    background: red;
+}
+
+.current-card{
+    grid-area: 1/2/2/3;
+    background: yellow;
+}
+
+.timeline{
+    grid-area: 2/1/3/3;
+    background: orange;
+}
+
+.stack-card{
+    width: 250px;
+    height: 300px;
+    background: var(--green);
+    border: 3px solid var(--t2Col);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    position: absolute;
+    cursor: pointer;
+}
