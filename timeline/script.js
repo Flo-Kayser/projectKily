@@ -44,7 +44,26 @@ function createStack() {
         stack.appendChild(newStackCard);
     }
 }
-document.querySelector(".current-card").addEventListener("click", ()=>{
+document.querySelector(".current-card-container").addEventListener("click", ()=>{
     firstStackCard= stack.querySelector(".stack-card:last-child")
-    firstStackCard.remove()
+    moveCard(firstStackCard)
+
 })
+
+function moveCard(card){
+    card.classList.add("move")
+    currentCardContainer.innerHTML =""
+    setTimeout(() => {
+        card.remove()
+        createCurrentCard()
+    }, 2000);
+}
+const currentCardContainer = document.querySelector(".current-card-container")
+
+function createCurrentCard(){
+    const newCard = document.createElement("div")
+
+    newCard.classList.add("current-card")
+
+    currentCardContainer.appendChild(newCard)
+}
