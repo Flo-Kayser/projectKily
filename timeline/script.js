@@ -1,5 +1,5 @@
 import { loadTxt } from "../content/loadTxt.js"
-import "/timeline/components/hover.js"
+import "./components/hover.js"
 
 let timelineData = {};
 let isProcessing = false

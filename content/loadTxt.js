@@ -1,6 +1,6 @@
 
 export async function loadTxt(element) {
-    const url = `/content/${element}.txt`;
+    const url = `../content/${element}.txt`;
 
     try {
         const response = await fetch(url);
