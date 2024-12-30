@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <title>timeline</title>
 </head>
 
@@ -25,37 +29,26 @@
             </div>
             <div class="backside">
                 <div class="timeline-container">
-                    <div class="stack">
-                        <div class="stack-card"></div>
-                    </div>
+                    <div class="stack"></div>
                     <div class="current-card-container"></div>
-                    <div class="timeline"></div>
+                    <div class="timeline">
+                        <div class="default dates" id="start"><span>Mauerbau: 13.08.1961</span></div>
+                        <div class="adder">
+                            <div class="adder-dot">close</div>
+                        </div>
+                        <div class="default dates" id="end"><span>Corona-Pandemie: 31.12.2019</span></div>
+
+                    </div>
                 </div>
-
-
-
-
-
-
-                <!-- <ul>
-                    <li class="item" draggable="true">
-                        <div class="details">
-                            <img src="/assests/img_timeline/img_1.png" alt="Netzschkau">
-                            <span>Netzschkau</span>
-                        </div>
-                    </li>
-                    <li class="item" draggable="true">
-                        <div class="details">
-                            <img src="/assests/img_timeline/img_2.png" alt="Mauer">
-                            <span>Mauer</span>
-                        </div>
-                    </li>
-                </ul> -->
-                <button id="flip" onclick="flipWrapper()">flip</button>
             </div>
         </div>
     </main>
-    <script src="script.js" defer></script>
+    <div class="flash-overlay" id="flashOverlay">FALSCH</div>
+    <div class="mistakes">
+        <button>Nächstes Spiel</button>
+        sacoainvcaonvaopn
+    </div>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

@@ -26,12 +26,15 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var(--t2Col);
-    background: color-mix(in srgb, var(--green) 70%, #000 30%);
+    background-image: url("/assests/img_timeline/img_cardBg.png");
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    user-select: none;
 }
 
 /* Hauptcontainer */
@@ -63,19 +66,17 @@ main {
     width: 100%;
     height: 100%;
     border-radius: var(--radius);
-    /* padding: 20px; */
     backface-visibility: hidden;
-    background: var(--green);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     transition: var(--transition);
 }
 
-/* .task{
-    transform: rotateY(180deg);
-} */
+
 .backside {
     transform: rotateY(180deg);
 }
@@ -89,6 +90,7 @@ main {
 .task>span:first-child {
     font-size: 60px;
     font-weight: 800;
+    transform: translateZ(50px);
 }
 
 .task>span:nth-child(2) {
@@ -164,3 +166,87 @@ main {
     position: absolute;
     bottom: -30px;
 }
+
+.flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(118, 11, 11);
+    font-size: 300px;
+    color: #fff;
+    font-weight: 900;
+    opacity: 0;
+    pointer-events: none;
+
+    z-index: 9999;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.flash-overlay.active {
+    animation: flash 1s linear;
+}
+
+@keyframes flash {
+
+    0%,
+    50%,
+    100% {
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+    }
+}
+
+.mistakes {
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    opacity: 0;
+    font-size: 200px;
+    font-weight: 900;
+    pointer-events: none;
+    transition: .4s;
+
+}
+
+.mistakes.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.back-to-main-menu-btn {
+    font-size: 30px;
+    backdrop-filter: blur(50px);
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 2px solid #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.back-to-main-menu-btn:hover{
+    backdrop-filter: brightness(80%);
+    border-color: #282827;
+    color: #282827;
+}
+.back-to-main-menu-btn:active{
+    transform: scale(.96);
+}
+

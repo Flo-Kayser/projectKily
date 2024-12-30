@@ -1,4 +1,31 @@
-task-heading=Die nächste Aufgabe wartet bereits...|
-task=Was ist die Aufgabe? Ganz einfach. Durch euer fortgeschrittenes Alter habt ihr schon so einiges miterlebt. 
-Jetzt ist es Zeit, sich zu erinnern. Ordnet die Geschehnisse nach dem Datum, an dem sie stattgefunden haben, 
-um ein weiteren Lösungsbuchstaben zu ergattern.
+task-heading =   Die nächste Aufgabe wartet bereits...|
+task =           Was ist die Aufgabe? Ganz einfach. Durch euer fortgeschrittenes Alter habt ihr schon so einiges miterlebt. 
+                Jetzt ist es Zeit, sich zu erinnern. Ordnet die Geschehnisse nach dem Datum, an dem sie stattgefunden haben, 
+                um ein weiteren Lösungsbuchstaben zu ergattern.|
+img_1 = Der erste James-Bond-Film mit dem Titel "James Bond jagt Dr. No" kommt in die Kinos!|
+img_2 = Die Genossenschaft DATEV wurde von 65 Steuer- bevollmächtigten im Kammerbezirk Nürnberg gegründet, um die Buchführung ihrer Mandanten mit Hilfe der EDV zu erledigen.|
+img_3 = Die Raumsonde der Apollo-11-Mission landete erfolgreich auf der Oberfläche des Mondes und markierte einen historischen Meilenstein in der Raumfahrtgeschichte.|
+img_4 = Knapp zwei Jahre nach der Einführung des Farbfernsehens in der BRD stellte auch die DDR auf Farbfernsehen um.|
+img_5 = Malcolm und Angus Young gründen die Erfolgsband AC/DC!|
+img_6 = Die CD wurde der Welt erstmals auf der Funkausstellung in Berlin vorgestellt und löste damit die Schallplatte als bevorzugtes Musikformat ab.|
+img_7 = Die erste Folge der Lindenstraße läuft im Sonntag- vorabendprogramm.|
+img_8 = Die Welt ist erschüttert von der verheerenden Katastrophe im Reaktor von Tschernobyl, welche eine der schlimmsten Nuklearkatastrophen der Geschichte auslöste.|
+img_9 = Der Formel-1-Fahrer Michael Schumacher holt seinen ersten WM-Sieg und starte damit sein Vermächtnis als einer der erfolgreichsten Fahrer in der Geschichte des Motorsports.|
+img_10 = Die Deutsche Mark wird offiziell vom Euro als Zahlungsmittel in Deutschland ersetzt.|
+img_11 = Der erste Sieger der Castingshow DSDS steht fest. Es ist Alexander Klaws.|
+img_12 = Der FC Bayern München verliert das Champions League Finale im eigenen Stadion gegen den FC Chelsea|
+
+
+
+date_1 = 1. Bond Film: 02.10.1962|
+date_2 = Datev: 14.02.1966|
+date_3 = Mondlandung: 21.07.1669|
+date_4 = Farbfernsehen: 03.10.1969|
+date_5 = AC/DC: 31.12.1973|
+date_6 = CD: 15.04.1981|
+date_7 = Lindenstraße: 08.12.1985|
+date_8 = Tschernobyl: 26.04.1986|
+date_9 = Schuhmacher: 13.11.1994|
+date_10 = Euro: 01.01.2002|
+date_11 = Klaws DSDS: 08.03.2003|
+date_12 = Finale Dahoam: 19.05.2012|

@@ -1,6 +1,6 @@
-.timeline-container{
+.timeline-container {
     position: relative;
-    background: var(--blue);
+
     height: 100%;
     width: 100%;
     border-radius: var(--radius);
@@ -10,33 +10,34 @@
     gap: 20px;
 
     padding: 20px;
-} 
+}
 
-.stack, .current-card-container, .timeline{
+.stack,
+.current-card-container,
+.timeline {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.stack{
+
+.stack {
     grid-area: 1/1/2/2;
-    background: red;
+    height: 400px;
 }
 
-.current-card-container{
+.current-card-container {
     grid-area: 1/2/2/3;
-    background: yellow;
-
+    height: 400px;
 }
 
-.timeline{
+.timeline {
     grid-area: 2/1/3/3;
-    background: orange;
 }
 
-.stack-card{
-    width: 300px;
-    height: 250px;
+.stack-card {
+    height: 70%;
+    aspect-ratio: 4/3;
     background-image: url("/assests/img_timeline/img_cardBg.png");
     background-position: center;
     background-size: cover;
@@ -45,46 +46,192 @@
     box-shadow: var(--shadow);
 
     position: absolute;
-    cursor: pointer;
     z-index: 2;
 }
 
-.move{
+.move {
     animation: move 2s ease-in-out
 }
 
-@keyframes move{
-    80%{
+@keyframes move {
+    80% {
         transform: translateX(640px) rotateX(0);
     }
-    99%{
+
+    99% {
         transform: translateX(640px) rotateX(90deg);
     }
-    100%{
+
+    100% {
         transform: translateX(640px) rotateX(90deg) scale(0);
 
     }
 }
 
-.current-card{
-    width: calc(300px * 1.8);
-    height: calc(250px * 1.4);
-    background: var(--green);
+.current-card {
+
+    height: 100%;
+    aspect-ratio: 4/3;
+
+
     border: 3px solid var(--t2Col);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 
-    cursor: pointer;
-    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+
     animation: currentCard .5s ease-in;
 
+    overflow: hidden;
+    position: relative;
+
 }
-@keyframes currentCard{
-    0%{
-        transform: rotateX(-90deg) scale(.6); 
+
+@keyframes currentCard {
+    0% {
+        transform: rotateX(-90deg) scale(.6);
 
     }
-    100%{
+
+    100% {
         transform: rotateX(0) scale(1);
     }
+}
+
+.current-card-description {
+    height: 90%;
+    width: 40%;
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius);
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgb(118, 11, 11);
+    border: 2px solid #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    z-index: 0;
+}
+
+.timeline .dates {
+    height: 100%;
+    width: 80px;
+    margin: 0 3px;
+    transition: .2s;
+    opacity: 1;
+    border-radius: var(--radius);
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 10px;
+
+
+}
+
+#start {
+    background: url("/assests/img_timeline/img_start.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#end {
+    background: url("/assests/img_timeline/img_end.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.timeline .dates span {
+    transform: rotate(-90deg) translateX(50%);
+    display: block;
+    backdrop-filter: blur(15px);
+    border-radius: var(--radius);
+    text-shadow: 0 0 10px #fff;
+
+    padding: 5px;
+    white-space: nowrap;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    background-position: center;
+    transition: all .3s;
+}
+
+
+.timeline .dates.hovered {
+    width: 350px;
+    background-position: center;
+    background-size: auto;
+}
+
+.timeline .dates.dates.hovered span {
+    transform: rotate(0);
+    margin-right: auto;
+}
+
+
+.timeline .dates.not-hovered {
+    opacity: .5;
+}
+
+.adder {
+    width: 15px;
+    height: 110%;
+    background: rgb(118, 11, 11);
+    display: flex;
+    position: relative;
+    border-radius: var(--radius);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.adder.hide {
+    width: 0;
+    opacity: 0;
+}
+
+.adder:hover,
+.adder-dot:hover .adder {
+    width: 20px;
+}
+
+.adder:hover .adder-dot,
+.adder-dot:hover {
+    width: 65px;
+    top: -50px;
+}
+
+.adder-dot {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    width: 60px;
+    aspect-ratio: 1/1;
+    background: rgb(118, 11, 11);
+    border-radius: 50%;
+    border-bottom-right-radius: 0;
+    transition: all .2s;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:"Material Icons";
+    font-size: 24px;
+    color: #fff;
+    font-weight: 900;
 }
