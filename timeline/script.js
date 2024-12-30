@@ -130,7 +130,7 @@ function getCardNumber(arr) {
 }
 
 function createCurrentCardDesign(card, index) {
-    card.style.background = `url("/assests/img_timeline/img_${index}.png")`
+    card.style.background = `url("../assests/img_timeline/img_${index}.png")`
     card.style.backgroundSize = "cover"
     card.style.backgroundPosition = "center"
 
@@ -163,7 +163,7 @@ timeline.addEventListener("click", (e) => {
         newElement.classList.add("dates")
         newElement.id = cardID
 
-        newElement.style.background = `url("/assests/img_timeline/img_${cardID}.png")`
+        newElement.style.background = `url("../assests/img_timeline/img_${cardID}.png")`
         newElement.style.backgroundSize = "cover"
         newElement.style.backgroundPosition = "center"
 
