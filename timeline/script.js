@@ -307,7 +307,7 @@ function gameEnd() {
 
     mainManuBtn.addEventListener("click", () => {
         setTimeout(() => {
-            window.location.href = "/index.html"
+            window.location.href = "../index"
         }, 500);
 
     })
