@@ -142,13 +142,13 @@
 }
 
 #start {
-    background: url("/assests/img_timeline/img_start.png");
+    background: url("../../assests/img_timeline/img_start.png");
     background-size: cover;
     background-position: center;
 }
 
 #end {
-    background: url("/assests/img_timeline/img_end.png");
+    background: url("../../assests/img_timeline/img_end.png");
     background-size: cover;
     background-position: center;
 }
