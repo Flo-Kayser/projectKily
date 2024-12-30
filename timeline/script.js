@@ -14,7 +14,6 @@ async function initializeTimeline() {
 }
 
 window.onload = function () {
-    gameEnd()
     initializeTimeline()
     setTimeout(() => {
         loadTask()
