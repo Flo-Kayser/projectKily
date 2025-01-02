@@ -5,7 +5,7 @@
 @import url("components/evaluation.css");
 @import url("components/progressBar.css");
 
-@import url("/global_components/readyBtn.css");
+@import url("../global_components/readyBtn.css");
 
 * {
     margin: 0;
