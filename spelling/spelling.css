@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url("components/background.css");
+@import url("components/quiz_container.css");
+@import url("components/answerHover.css");
+@import url("components/evaluation.css");
+@import url("components/progressBar.css");
+
+@import url("/global_components/readyBtn.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--t2Col);
+    background: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 70%;
+
+}
+
+#task-heading,
+#task {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    width: 80%;
+}
+
+#task-heading {
+    font-size: 70px;
+    width: auto;
+}
+
+#task-heading.disappear , #task.disappear{
+    animation: disappear .5s linear forwards;
+}
+
+@keyframes disappear {
+    0% {
+        transform: translateY(0);
+    }
+    40%{transform: translateY(30px);}
+    100% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+}
+
+

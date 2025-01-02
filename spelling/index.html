@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spelling.css">
+    <title>Rechtschreibung</title>
+</head>
+
+<body>
+
+
+    <section class="task-container">
+        <span id="task-heading">LADEN ...</span>
+        <span id="task"></span>
+        <div class="pulse">
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <div class="ready">Bereit?</div>
+        </div>
+    </section>
+    <section class="quiz-container">
+        <div class="progress-bar">
+            
+        </div>
+        <div class="question"><span id="question-number"></span><span id="question"></span></div>
+
+        <div class="answer-container">
+            <div class="answer"><span></span><span></span><span></span><span></span>
+                <div id="a1"></div>
+            </div>
+            <div class="answer"><span></span><span></span><span></span><span></span>
+                <div id="a2"></div>
+            </div>
+            <div class="answer"><span></span><span></span><span></span><span></span>
+                <div id="a3"></div>
+            </div>
+            <div class="answer"><span></span><span></span><span></span><span></span>
+                <div id="a4"></div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div id="proof-btn"></div>
+            <div id="next-btn"></div>
+        </div>
+    </section>
+    <section class="bg">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </section>
+
+    <section class="evaluation">
+        <div class="mistakes-display">
+            <span>Fehler: </span>
+            <span id="mistakes"></span>
+        </div>
+    </section>
+    <script type="module" src="spelling.js"></script>
+</body>
+
+</html>

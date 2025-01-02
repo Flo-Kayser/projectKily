@@ -1,0 +1,217 @@
+.quiz-container {
+    width: 90%;
+    height: 90%;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+
+
+    position: relative;
+    gap: 30px;
+    transition: all .5s, opacity .3s;
+    opacity: 1;
+
+}
+
+.quiz-container.disappear{
+    display: none;
+}
+
+
+
+
+
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 90%;
+    text-align: center;
+    color: #FFFFFF;
+
+    text-shadow: #474747 3px 5px 2px;
+
+    padding: 30px;
+    margin: auto;
+    font-size: 40px;
+    border-radius: 20px;
+
+    transition: .3s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+#question-number {
+    font-size: 200px;
+}
+
+.answer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+
+    transition: .3s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.fade-out{
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+.fade-in{
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.answer {
+    background: #632583;
+    background: linear-gradient(to right, #632583 0%, #000000 100%);
+    position: relative;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 2s linear letter-spacing .5s;
+
+    font-size: 30px;
+    color: #D4A5E6;
+    text-shadow: #474747 3px 5px 5px;
+    cursor: pointer;
+}
+
+.answer:nth-child(1),
+.answer:nth-child(3) {
+    background: linear-gradient(to left, #632583 0%, transparent 100%);
+}
+
+.answer:hover {
+    letter-spacing: 3px;
+}
+
+.answer:active {
+    transform: scale(.96);
+}
+
+.answer.active {
+    background: #D4A5E6;
+    color: #632583;
+}
+
+.answer.active:hover {
+    background: color-mix(in srgb, #d4a5e6 80%, #fff 20%);
+    letter-spacing: 0;
+}
+
+/* buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+#proof-btn {
+    height: 80px;
+    position: relative;
+    pointer-events: none;
+
+}
+
+#proof-btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .75s ease-in-out;
+}
+
+#proof-btn.active span {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#proof-btn.active , #next-btn.active{
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#proof-btn.active:hover span, #next-btn.active:hover span {
+    background: #474747;
+}
+
+#proof-btn.active:hover::before, #next-btn.active:hover::before {
+    color: #d4a5e6;
+}
+
+#proof-btn.active::before {
+    content: attr(data-txt-active);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    z-index: 2;
+}
+
+#proof-btn::before{
+    content: attr(data-txt);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 30px;
+    z-index: 2;
+}
+
+#next-btn {
+    height: 80px;
+    position: relative;
+    pointer-events: none;
+    transition: opacity .3s;
+
+}
+#next-btn span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .75s ease-in-out;
+}
+#next-btn.active span{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+#next-btn::before{
+    content: "Nächste Frage!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #000;
+    font-size: 30px;
+    z-index: 2;
+}

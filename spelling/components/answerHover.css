@@ -1,0 +1,108 @@
+*{
+    --border: #D4A5E6 ;
+    --border-width:2px;
+}
+
+
+.answer span {
+    position: absolute;
+    background: var(--border);
+    pointer-events: none;
+    cursor: default;
+}
+
+.answer span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: var(--border-width);
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .1s;
+}
+
+.answer:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+.answer span:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: var(--border-width);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .2s;
+    transition-delay: .1s;
+}
+
+.answer:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.answer span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: var(--border-width);
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .1s;
+    transition-delay: .3s;
+}
+
+.answer:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.answer span:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--border-width);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s;
+    transition-delay: .4s;
+}
+
+.answer:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.answer:hover {
+    background: linear-gradient(to left, #632583,#632583 );
+}
+
+/* child 1 und 3 */
+.answer:nth-child(1) span:nth-child(1),.answer:nth-child(3) span:nth-child(1){
+    right: 0;
+    left: auto;
+}
+
+.answer:nth-child(1) span:nth-child(2),.answer:nth-child(3) span:nth-child(2){
+    right: 0;
+    left: auto;
+    transform-origin: left;
+}
+.answer:nth-child(1):hover span:nth-child(2),.answer:nth-child(3):hover span:nth-child(2){
+    transform-origin: right;
+}
+.answer:nth-child(1) span:nth-child(3),.answer:nth-child(3) span:nth-child(3){
+    left: 0;
+    right: auto;
+}
+
+.answer:nth-child(1) span:nth-child(4),.answer:nth-child(3) span:nth-child(4){
+    left: 0;
+    right: auto;
+    transform-origin: right;
+}
+
+.answer:nth-child(1):hover span:nth-child(4),.answer:nth-child(3):hover span:nth-child(4){
+    transform-origin: left;
+}

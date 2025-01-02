@@ -1,0 +1,79 @@
+task-heading = Diese Aufgabe wird euch gefallen ... |
+task = Ihr müsst euch, ähnlich wie bei "Wer wird Millionär?", durch nur 15 Fragen kämpfen – das geht also schnell. Google und Co. sind natürlich tabu. Viel Spaß!|
+
+question = Die Frage, die sich hier stellt, ist: Wie lautet die korrekte Schreibweise von ...?|
+
+q1_a1 = lizenziren&f|
+q1_a2 = lizensieren&f|
+q1_a3 = lizenszieren&f|
+q1_a4 = lizenzieren&t|
+
+q2_a1 = Diarö&f|
+q2_a2 = Diarrhö&t|
+q2_a3 = Diaröh&f|
+q2_a4 = Diahrö&f|
+
+q3_a1 = gallopieren&f|
+q3_a2 = galoppieren&t|
+q3_a3 = galopieren&f|
+q3_a4 = galloppieren&f|
+
+q4_a1 = Sisyphosarbeit&f|
+q4_a2 = Sisyfusarbeit&f|
+q4_a3 = Sisyphusarbeit&t|
+q4_a4 = Sisiphusarbeit&f|
+
+q5_a1 = Lappaliee&f|
+q5_a2 = Lappalie&t|
+q5_a3 = Lapalie&f|
+q5_a4 = Lapaliee&f|
+
+q6_a1 = kolossal&t|
+q6_a2 = colosal&f|
+q6_a3 = kollosal&f|
+q6_a4 = kollossal&f|
+
+q7_a1 = Rhytmus&f|
+q7_a2 = Rytmus&f|
+q7_a3 = Rythmus&f|
+q7_a4 = Rhythmus&t|
+
+q8_a1 = Triologie&f|
+q8_a2 = Trilogie&t|
+q8_a3 = Triolockie&f|
+q8_a4 = Triologgie&f|
+
+q9_a1 = Inbusschlüssel&t|
+q9_a2 = Imbusschlüssel&f|
+q9_a3 = Inbussschlüssel&f|
+q9_a4 = Imbuschlüssel&f|
+
+q10_a1 = Karusell&f|
+q10_a2 = Karrusel&f|
+q10_a3 = Karussell&t|
+q10_a4 = Karrusell&f|
+
+q11_a1 = Regiseur&f|
+q11_a2 = Regissieur&f|
+q11_a3 = Regisseur&t|
+q11_a4 = Regieseur&f|
+
+q12_a1 = Repetoire&f|
+q12_a2 = Repertoiré&f|
+q12_a3 = Repertoir&f|
+q12_a4 = Repertoire&t|
+
+q13_a1 = Rhododendron&t|
+q13_a2 = Rododerohn&f|
+q13_a3 = Rhododentron&f|
+q13_a4 = Rhodudendron&f|
+
+q14_a1 = Ich werd beklopt!&f|
+q14_a2 = Ich werde bekloppt!&t|
+q14_a3 = Ich werde beklopt!&f|
+q14_a4 = Ich werd bekloppt!&f|
+
+q15_a1 = Fruher war mehr Lametta!&f|
+q15_a2 = Früher war mehr Lametta!&t|
+q15_a3 = Früher war mehr Lameta!&f|
+q15_a4 = Fruher war mehr Lamatta!&f|

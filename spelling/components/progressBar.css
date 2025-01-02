@@ -1,0 +1,70 @@
+.progress-bar {
+    padding: 0;
+    position: relative;
+
+    background:rgba(99,37,131,.5);
+    height: 15vh;
+    width: 1264px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    z-index: 1;
+
+    pointer-events: none;
+
+}
+
+.progress-bar .circle{
+    position: relative;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 0 18px;
+    border-radius: 50%;
+
+    background: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #737373;
+    transition: .3s;
+    transform-origin: left;
+}
+.progress-bar .circle.complete{
+    color: #000;
+    background: #d4a5e6;
+}
+
+.progress-bar .circle::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 10px;
+    background: #a3a3a3;
+    left: -45px;
+    z-index: -2;
+}
+.progress-bar .circle::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 10px;
+    background: #d4a5e6;
+    left: -45px;
+    z-index: -1;
+    transition: transform .5s ease-in-out;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.progress-bar .circle.active::after{
+    transform: scaleX(1);
+}
+
+.progress-bar .circle:nth-child(1):before{
+    width: 0;
+}
+.progress-bar .circle.active:nth-child(1):after{
+    transform: scaleX(0);
+}

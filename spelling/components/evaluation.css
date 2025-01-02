@@ -1,0 +1,47 @@
+.evaluation {
+    height: 300px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .3s;
+}
+
+.evaluation.hide {
+    display: none;
+}
+
+.evaluation div span {
+    font-size: 250px;
+    font-weight: 900;
+    color: rgba(99, 37, 131, .8);
+    -webkit-text-stroke: 4px #d4a5e6;
+}
+
+.back-to-main-menu-btn {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #d4a5e6;
+    color: #d4a5e6;
+
+    cursor: pointer;
+    transition: .3s;
+
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-main-menu-btn:hover {
+    border-color: #282827;
+    color: #282827;
+    background: #d4a5e6;
+}
+
+.back-to-main-menu-btn:active {
+    transform: scale(.96);
+}

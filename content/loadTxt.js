@@ -14,6 +14,7 @@ export async function loadTxt(element) {
                 elementData[key.trim()] = value.trim();
             }
         });
+        console.log(element ,"-text wurde geladen")
         return elementData;
 
     } catch (error) {
