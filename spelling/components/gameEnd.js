@@ -1,12 +1,10 @@
 export function isGameFinished(round, mistakes) {
     if (round === 15) {
-        console.log("ende")
         updateMistakesDisplay(mistakes)
         setTimeout(triggerGameEnd, 2000);
         return true
 
     } else {
-        console.log("weiter")
         return false
     }
 

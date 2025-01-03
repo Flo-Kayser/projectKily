@@ -6,7 +6,6 @@ export function initializeProgressBar(){
         const circle = document.createElement("div")
         circle.classList.add("circle")
         circle.id=`circle${i}`
-        console.log(circle.id)
         circle.textContent = i
         progressBarContainer.appendChild(circle)
     }

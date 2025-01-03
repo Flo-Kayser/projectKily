@@ -5,7 +5,7 @@ import { activateProofBtn } from "./components/btnEffects.js"
 import { checkAnswer } from "./components/checkAnswer.js"
 
 import { loadTask, loadQuestion, setRound } from "./components/loadAnswers.js"
-import { isGameFinished } from "./gameEnd.js"
+import { isGameFinished } from "./components/gameEnd.js"
 import { updateProgressBar, initializeProgressBar } from "./components/progressBar.js"
 
 // global variables
@@ -62,7 +62,6 @@ function setupAnswerSelection() {
 
         const selection = answerElement.querySelector("div")
         selectedAnswer = selection.id
-        console.log("Antwort " + selection.id.split("")[1] + " wurde gewählt")
         activateProofBtn()
     };
     answerContainer.addEventListener("click", handleAnswerSelection);

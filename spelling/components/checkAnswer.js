@@ -6,7 +6,6 @@ export function checkAnswer(round, selectedAnswer, textData) {
 
     const answerId = `q${round}_${selectedAnswer}`
     const status = textData[answerId].split("&")[1]
-    console.log("der status der antwort ist: " + status)
 
     if (status && status === "t") {
         markCorrectAnswer(round, selectedAnswer, textData)
@@ -15,7 +14,7 @@ export function checkAnswer(round, selectedAnswer, textData) {
         markCorrectAnswer(round, selectedAnswer, textData)
         return false
     } else {
-        console.warn("hs")
+        console.warn("Txt Document falsch")
     }
 
 
