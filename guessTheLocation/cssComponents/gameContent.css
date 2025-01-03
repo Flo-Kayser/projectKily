@@ -1,0 +1,61 @@
+.hide{
+    opacity: 0;
+}
+
+.game-content{
+    height: 100vh;
+    width: 100vw;
+    background: #343434;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+
+    padding: 20px;
+
+}
+
+.img-container{
+    background-color: #222;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    border-radius: 20px;
+
+}
+.img-container .img-box{
+    height: 80%;
+    width: 80%;
+    background: transparent;
+    position: relative;
+}
+
+
+
+.user-container{
+    background-color: #222;
+    
+
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    gap: 10px;
+
+    padding: 10px;
+
+}
+
+.user-container>div{
+    background: green;
+}
+
+.user-container .round-display{
+
+}
+
+

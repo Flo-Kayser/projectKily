@@ -1,0 +1,206 @@
+.img-container .details {
+    --thickness: 10px;
+
+    --long: 56%;
+    --long_outer: 58%;
+
+    --long_vertical:58%;
+    --long_vertical_outer:60%;
+
+    --offset_percent: -6%;
+    --offset_percent_outer: -8%;
+
+    --offset_vertical_percent: -8%;
+    --offset_vertical_percent_outer: -10%;
+
+    --offset_thickness: -5px;
+    --offset_thickness_outer: -25px;
+
+
+    --bar-color: #f4f4f4;
+
+}
+
+/* horizontal */
+.details_horizontal span {
+    position: absolute;
+    background: var(--bar-color);
+    transition: transform .5s ease-out;
+    transform: scaleY(1);
+    width: var(--thickness);
+    transform-origin: bottom;
+    height: var(--long);
+}
+
+.details_horizontal span:nth-child(n+5) {
+    height: var(--long_outer);
+}
+
+.details_horizontal span:nth-child(odd) {
+    transform-origin: top;
+}
+
+.details_horizontal span:nth-child(1) {
+    top: var(--offset_percent);
+    left: var(--offset_thickness);
+}
+
+.details_horizontal span:nth-child(2) {
+    bottom: var(--offset_percent);
+    left: var(--offset_thickness);
+}
+
+.details_horizontal span:nth-child(3) {
+    top: var(--offset_percent);
+    right: var(--offset_thickness);
+}
+
+.details_horizontal span:nth-child(4) {
+    bottom: var(--offset_percent);
+    right: var(--offset_thickness);
+}
+
+.details_horizontal span:nth-child(5) {
+    top: var(--offset_percent_outer);
+    left: var(--offset_thickness_outer);
+}
+
+.details_horizontal span:nth-child(6) {
+    bottom: var(--offset_percent_outer);
+    left: var(--offset_thickness_outer);
+}
+
+.details_horizontal span:nth-child(7) {
+    top: var(--offset_percent_outer);
+    right: var(--offset_thickness_outer);
+}
+
+.details_horizontal span:nth-child(8) {
+    bottom: var(--offset_percent_outer);
+    right: var(--offset_thickness_outer);
+}
+
+.details.active .details_horizontal span {
+    transform: scaleY(.25);
+}
+
+/* vertical */
+
+.details_vertical span {
+    position: absolute;
+    background: var(--bar-color);
+    transition: transform .5s ease-out;
+    transform: scaleX(1);
+    height: var(--thickness);
+    transform-origin: left;
+    width: var(--long_vertical);
+}
+
+.details_vertical span:nth-child(n+5) {
+    width: var(--long_vertical_outer);
+}
+
+.details_vertical span:nth-child(even) {
+    transform-origin: right;
+}
+
+.details_vertical span:nth-child(1) {
+    left: var(--offset_vertical_percent);
+    top: var(--offset_thickness);
+}
+
+.details_vertical span:nth-child(2) {
+    right: var(--offset_vertical_percent);
+    top: var(--offset_thickness);
+}
+
+.details_vertical span:nth-child(3) {
+    left: var(--offset_vertical_percent);
+    bottom: var(--offset_thickness);
+}
+
+.details_vertical span:nth-child(4) {
+    right: var(--offset_vertical_percent);
+    bottom: var(--offset_thickness);
+}
+
+.details_vertical span:nth-child(5) {
+    left: var(--offset_vertical_percent_outer);
+    top: var(--offset_thickness_outer);
+}
+
+.details_vertical span:nth-child(6) {
+    right: var(--offset_vertical_percent_outer);
+    top: var(--offset_thickness_outer);
+
+}
+
+.details_vertical span:nth-child(7) {
+    left: var(--offset_vertical_percent_outer);
+    bottom: var(--offset_thickness_outer);
+}
+
+.details_vertical span:nth-child(8) {
+    right: var(--offset_vertical_percent_outer);
+    bottom: var(--offset_thickness_outer);
+}
+
+.details.active .details_vertical span {
+    transform: scaleX(.25);
+}
+
+/* img placeholder */
+.details .img-placeholder{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, .5); */
+
+    background: linear-gradient(to bottom, #DD723C,#AD4A28);
+
+    overflow: hidden;
+
+    opacity: 1;
+    transition: opacity .5s;
+}
+.img-placeholder div{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.img-placeholder span{
+    position: absolute;
+    background: #3d2b06;
+
+}
+
+.img-placeholder span:nth-child(1){
+    width: 200px;
+    height: 80px;
+    bottom: -30px;
+    right: -70px;
+
+    border-radius:50%;
+}
+.img-placeholder span:nth-child(2){
+    width: 150px;
+    height: 80px;
+    bottom: -20px;
+    left: -50px;
+    border-radius:50%;
+}
+.img-placeholder span:nth-child(3){
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    right: 40px;
+    border-radius:50%;
+
+    background: yellow;
+    box-shadow: 0 0 40px yellow;
+}

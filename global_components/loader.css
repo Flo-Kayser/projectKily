@@ -10,7 +10,7 @@
 
     pointer-events: all;
     cursor: none;
-    transition: opacity .5s;
+    transition: opacity 1s;
 }
 
 .loader.hide{

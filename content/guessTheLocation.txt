@@ -1,0 +1,4 @@
+
+task-heading = Holt die Fotoalben raus!| 
+task = In diesem Spiel ist es eure Aufgabe, anhand von Bildern zu erraten, was darauf zu sehen ist. Ob Ort, Gegenstand oder Person, Ihr habt pro Runde jeweils fünf verschiedene Bilder zur Verfügung, also auch fünf Versuche. Viel Spaß!|
+

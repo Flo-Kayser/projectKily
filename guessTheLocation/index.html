@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>locations</title>
+</head>
+
+<body>
+    <section class="loader" style="background: #343434;"">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </section>
+
+    <section class="task-container" >
+        <div id="task-heading"></div>
+        <div id="task"></div>
+        <div class="pulse">
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <div class="ready">Bereit?</div>
+        </div>
+    </section>
+
+    <section class="game-content hide" style="display: none;">
+        
+
+        <div class="img-container hide">
+            <div class="img-box">
+                <div id="img">
+
+                </div>
+                <div class="details active">
+
+                    <div class="details_horizontal">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="details_vertical">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+
+                    <div class="img-placeholder">
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-container hide">
+            <div class="round-display">
+                <span>Runde:</span>
+                <span id="round-count"></span>
+            </div>
+            <div class="player-area"></div>
+            <div class="buttons"></div>
+        </div>
+
+    </section>
+
+    <script type="module" src="index.js"></script>
+
+</body>
+
+</html>
