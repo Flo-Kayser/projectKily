@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
     setupAnswerSelection()
 
+    setTimeout(() => {
+        const loader = document.querySelector(".loader")
+        loader.classList.add("hide")
+    }, 9000);
+
 })
 
 async function initializeTxt() {

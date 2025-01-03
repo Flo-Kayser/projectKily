@@ -1,0 +1,74 @@
+.loader{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: all;
+    cursor: none;
+    transition: opacity .5s;
+}
+
+.loader.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader.hide span{
+    animation-play-state: paused;
+
+}
+
+.loader span{
+    width: 70px;
+    height: 500px;
+    margin: 0 20px;
+    background: inherit;
+    animation: loader 1.5s linear infinite;
+}
+
+.loader span:nth-child(1){
+    animation-delay: 0s;
+}
+.loader span:nth-child(2){
+    animation-delay: .4s;
+}
+.loader span:nth-child(3){
+    animation-delay: .8s;
+}
+.loader span:nth-child(4){
+    animation-delay: 1.2s;
+}
+.loader span:nth-child(5){
+    animation-delay: 1.6s;
+}
+.loader span:nth-child(6){
+    animation-delay: 2s;
+}
+.loader span:nth-child(7){
+    animation-delay: 2.4s;
+}
+
+@keyframes loader{
+    0%{
+        box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+        opacity: 0;
+        transform: translateX(-50px) scale(1);
+    }
+    50%{
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+        opacity: 1;
+        transform: translateX(0) scale(1.2);
+    }
+    100%{
+        box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+        opacity: 0;
+        transform: translateX(50px) scale(1);
+        
+    }
+}
+
