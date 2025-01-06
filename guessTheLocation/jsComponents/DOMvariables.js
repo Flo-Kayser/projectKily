@@ -10,6 +10,18 @@ export const pulseElement = taskContainer.querySelector(".pulse")
 // game-container DOM elements
 export const gameContainer = document.querySelector(".game-content")
 // user-container
-export const imgContainer = document.querySelector(".img-container")
 export const userContainer = document.querySelector(".user-container")
+export const roundCount = document.querySelector("#round-count")
+export const questionWord = document.querySelector("#question-word")
+export const hidePlayerArea = document.querySelector(".hide-player-area")
 
+export const indexBtns = document.querySelectorAll(".img-index")
+export const userInputs = document.querySelectorAll(".user-input")
+export const submitBtns = document.querySelectorAll(".submit-button")
+
+
+// img-container
+export const imgContainer = document.querySelector(".img-container")
+export const imgDisplay = document.querySelector("#img")
+export const imgBorder = document.querySelector(".details")
+export const imgPlaceholder = document.querySelector(".img-placeholder")

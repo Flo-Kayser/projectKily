@@ -13,7 +13,7 @@
         <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
     </section>
 
-    <section class="task-container" >
+    <section class=" task-container">
         <div id="task-heading"></div>
         <div id="task"></div>
         <div class="pulse">
@@ -27,7 +27,7 @@
     </section>
 
     <section class="game-content hide" style="display: none;">
-        
+
 
         <div class="img-container hide">
             <div class="img-box">
@@ -54,12 +54,55 @@
             </div>
         </div>
         <div class="user-container hide">
-            <div class="round-display">
-                <span>Runde:</span>
-                <span id="round-count"></span>
+            <div class="question">
+                <span id="question-word"></span>
             </div>
-            <div class="player-area"></div>
-            <div class="buttons"></div>
+            <div class="player-area">
+                <div class="answer-section" id="answer-section1">
+                    <div id="img-index1" class="img-index">I</div>
+                    <div class="user-input">
+                        <input type="text" id="user-input-1" autocomplete="off">
+                    </div>
+                    <div class="submit-button" id="submit-1">Überprüfen</div>
+                </div>
+                <div class="answer-section" id="answer-section2">
+                    <div id="img-index2" class="img-index">II</div>
+                    <div class="user-input">
+                        <input type="text" id="user-input-2" autocomplete="off">
+                    </div>
+                    <div class="submit-button" id="submit-2">Überprüfen</div>
+                </div>
+                <div class="answer-section" id="answer-section3">
+                    <div id="img-index3" class="img-index">III</div>
+                    <div class="user-input">
+                        <input type="text" id="user-input-3" autocomplete="off">
+                    </div>
+                    <div class="submit-button" id="submit-3">Überprüfen</div>
+                </div>
+                <div class="answer-section" id="answer-section4">
+                    <div id="img-index4" class="img-index">IV</div>
+                    <div class="user-input">
+                        <input type="text" id="user-input-4" autocomplete="off">
+                    </div>
+                    <div class="submit-button" id="submit-4">Überprüfen</div>
+                </div>
+                <div class="answer-section" id="answer-section5">
+                    <div id="img-index5" class="img-index">V</div>
+                    <div class="user-input">
+                        <input type="text" id="user-input-5" autocomplete="off">
+                    </div>
+                    <div class="submit-button" id="submit-5">Überprüfen</div>
+                </div>
+                <span class="hide-player-area"></span>
+            </div>
+            <div>
+                <div class="round-display">
+                    <span>Runde: </span>
+                    <span id="round-count"></span>
+                </div>
+                <div class="next-btn">Nächste Runde</div>
+
+            </div>
         </div>
 
     </section>

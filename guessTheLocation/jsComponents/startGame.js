@@ -1,7 +1,7 @@
-import { loader, pulseElement, task, taskContainer, taskHeading,userContainer,gameContainer,imgContainer } from "./DOMvariables.js";
+import { loader, pulseElement, task, taskContainer, taskHeading,userContainer,gameContainer,imgContainer,imgDisplay,imgPlaceholder, imgBorder} from "./DOMvariables.js";
 import { resetUI } from "./resetUI.js";
 
-export function startGame(round) {
+export function startGame() {
     loader.classList.add("hide")
 
     let pulseElementAction
@@ -17,7 +17,7 @@ export function startGame(round) {
             gameContainer.style.transition = ".5s"
             userContainer.style.transition = ".5s"
             imgContainer.style.transition = ".5s"
-            resetUI(round)
+            
             setTimeout(() => {
                 gameContainer.classList.remove("hide")
             }, 400);
@@ -26,6 +26,15 @@ export function startGame(round) {
                 imgContainer.classList.remove("hide")
             }, 500);
         }, 1500);
+
+        setTimeout(() => {
+            imgPlaceholder.classList.add("hide")
+            imgDisplay.classList.add("show")
+            setTimeout(() => {
+                
+                imgBorder.classList.remove("active")
+            }, 500);
+        }, 3000);
 
         pulseElement.removeEventListener("click", pulseElementAction)
     }
