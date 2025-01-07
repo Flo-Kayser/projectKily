@@ -1,7 +1,18 @@
 
 task-heading = Holt die Fotoalben raus!| 
 task = In diesem Spiel ist es eure Aufgabe, anhand von Bildern zu erraten, was darauf zu sehen ist. Ob Ort, Gegenstand oder Person, Ihr habt pro Runde jeweils fünf verschiedene Bilder zur Verfügung, also auch fünf Versuche. Viel Spaß!|
+instruction-txt = Nachdem ihr ein Bild betrachtet und eure Antwort abgegeben habt, wird ein neues Bild angezeigt, zu dem ihr erneut eine Antwort eingeben könnt (alles dreht sich natürlich um dasselbe gesuchte Element). 
+Möchtet ihr jedoch beim dritten Versuch das Bild aus dem ersten Versuch erneut ansehen, könnt ihr ganz einfach die Schaltflächen mit den römischen Zahlen verwenden. Probiert es aus – ihr werdet es sofort verstehen!|
 
-answer_4 = europapark, rust, europapark-rust, europapark rust|
 
-round_4 = Europapark Rust|
+answer_1 = paris|
+answer_2 = santa, santa fe, santa fee, santafe, santafee, fe, santa-fe|
+answer_3 = europapark, rust, europapark-rust, europapark rust|
+answer_4 = lincoln, lincon, lincoln lawyer, lincon lawyer, micky, micky haller, mickey, mickey haller,mick,mick haller, haller, lincoln anwalt|
+answer_5 = tenerifa, teneriffa, teneiffa, teneriffa|
+
+round_1 = Paris|
+round_2 = Santa Fe|
+round_3 = Europapark Rust|
+round_4 = Lincoln Lawyer|
+round_5 = Teneriffa|

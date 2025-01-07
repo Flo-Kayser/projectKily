@@ -1,21 +1,29 @@
-import { roundCount, questionWord, userInputs, hidePlayerArea, imgBorder, imgDisplay, imgPlaceholder, indexBtns } from "./DOMvariables.js";
+import { roundCount, questionWord, userInputs, hidePlayerArea, imgBorder, imgDisplay, imgPlaceholder, indexBtns, nextBtn } from "./DOMvariables.js";
 
 let isProcessing = false
 
 export function resetUI(round, roundIndex) {
+    nextBtn.classList.add("hide")
+
     roundCount.textContent = round;
 
-    questionWord.textContent = (round % 2 === 0) ? "Was ist gesucht?" : "Wer ist gesucht?"
+    questionWord.textContent = (round % 2 === 0) ? "Wer ist gesucht?" : "Was ist gesucht?"
 
-    if (!imgBorder.classList.contains("active")) imgBorder.classList.add("active")
+    imgBorder.classList.add("active")
 
     resetPlayerArea(roundIndex)
 
     imgDisplay.style.backgroundImage = `url(../assests/img_guessTheLocation/img_${round}-${roundIndex}.png)`
 
     indexBtns.forEach((indexBtn, index) => {
-        indexBtn.addEventListener("click", () => handleIndexBtns(round, index))
-    })
+        if (indexBtn._listener) {
+            indexBtn.removeEventListener("click", indexBtn._listener);
+        }
+    
+        indexBtn._listener = () => handleIndexBtns(round, index);
+        indexBtn.addEventListener("click", indexBtn._listener);
+    });
+    
 }
 
 function resetPlayerArea(roundIndex) {
@@ -28,8 +36,6 @@ function resetPlayerArea(roundIndex) {
         userInput.autocomplete = "off"
 
         input.appendChild(userInput)
-
-
     })
     hidePlayerArea.style.transform = `scaleY(${1 - roundIndex * 0.2})`
 }

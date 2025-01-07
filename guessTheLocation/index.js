@@ -4,13 +4,14 @@ import { loadTask } from "./jsComponents/setupTxt.js";
 import { startGame } from "./jsComponents/startGame.js";
 import { checkAnswer } from "./jsComponents/checkAnswer.js";
 
-import { imgDisplay, imgBorder, submitBtns, userInputs, hidePlayerArea } from "./jsComponents/DOMvariables.js";
-
+import { imgDisplay, imgBorder, submitBtns, userInputs, hidePlayerArea, nextBtn } from "./jsComponents/DOMvariables.js";
 
 // gloabal variables
 let textData = {}
-let roundCount = 4
+let roundCount = 5
 let roundIndex = 1
+
+let isDisabled = false
 
 
 
@@ -33,6 +34,7 @@ async function initializeTxt() {
 function nextRound(round, roundIndex) {
     resetUI(round, roundIndex)
     setTimeout(submitBtnsListener, 200)
+
 }
 
 function submitBtnsListener() {
@@ -59,28 +61,40 @@ function handleInput(index) {
     if (input) {
         if (input.value !== "") {
             userInputs[index].innerHTML = ""
-            userInputs[index].textContent = input.value.trim().toUpperCase()
+            userInputs[index].textContent = input.value.charAt(0).toUpperCase() + input.value.slice(1).toLowerCase();
 
-            if (!checkAnswer(input.value, roundCount, textData,roundIndex)) {
-                if (roundIndex !== 5) {
-                    roundIndex++
-                    hidePlayerArea.style.transform = `scaleY(${1 - roundIndex * 0.2})`
-                    selectIndexImg(roundCount, roundIndex)
-                    // setTimeout(() => {
-                    //     document.getElementById(`user-input-${roundIndex}`).focus();
-                    // }, 1000);
-                } else {
-                    console.log("neeee")
-                }
-            }
+            roundIndex++
+            checkAnswer(input.value, roundCount, textData, roundIndex)
         } else return
     } else {
-        console.error(`Input mit ID 'user-input-${index + 1}' nicht gefunden`);
+        console.warn(`Input mit ID 'user-input-${index + 1}' nicht gefunden`);
     }
 }
 
 
+nextBtn.addEventListener("click", () => {
+    if (isDisabled) {
+        console.warn("Button is still disabled")
+        return
+    }
 
+
+    if (roundCount !== 10) {
+        isDisabled = true
+        roundIndex = 1
+        roundCount++
+        selectIndexImg(roundCount, roundIndex)
+        setTimeout(() => {
+            nextRound(roundCount, roundIndex)
+        }, 1000);
+        setTimeout(() => {
+            isDisabled = false
+        }, 3000);
+
+    } else {
+        triggerGameEnd()
+    }
+})
 
 
 
