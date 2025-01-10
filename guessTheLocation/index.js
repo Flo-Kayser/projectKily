@@ -6,7 +6,7 @@ import { checkAnswer } from "./jsComponents/checkAnswer.js";
 
 import { imgDisplay, imgBorder, submitBtns, userInputs, hidePlayerArea, nextBtn } from "./jsComponents/DOMvariables.js";
 
-// gloabal variables
+// global variables
 let textData = {}
 let roundCount = 5
 let roundIndex = 1

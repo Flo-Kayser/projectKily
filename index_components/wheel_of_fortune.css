@@ -1,0 +1,39 @@
+.wheel-of-fortune{
+    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wheel{
+    width: 500px;
+    aspect-ratio: 1/1;
+    background: black;
+    border: 15px solid;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.wheel .part{
+    position: absolute;
+    
+   
+    height: 50%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: translateX(-50%);
+    transform-origin: top;
+}
+
+.spin-btn{
+    width: 300px;
+    height: 50px;
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
