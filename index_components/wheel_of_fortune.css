@@ -1,39 +1,261 @@
-.wheel-of-fortune{
-    background: red;
+* {
+    --powder-blue: #B3CDE0;
+    --forest-green: #52796F;
+    --dark-grey: #222;
+}
+
+.wheel-of-fortune {
+    background: var(--forest-green);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    position: relative;
     align-items: center;
+    padding: 20px;
+
+    border: 10px solid var(--dark-grey);
+    border-radius: 40px;
+
 }
 
-.wheel{
+.wheel-container {
+    position: relative;
+}
+
+.wheel {
     width: 500px;
     aspect-ratio: 1/1;
-    background: black;
-    border: 15px solid;
+    border: 15px solid transparent;
     border-radius: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: end;
+    justify-content: right;
+    align-items: center;
+    transition: transform 5s cubic-bezier(0.250, 0.460, 0.450, 1);
+    z-index: 1;
+
 }
 
-.wheel .part{
+.wheel::before {
+    content: "";
     position: absolute;
-    
-   
-    height: 50%;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform: translateX(-50%);
-    transform-origin: top;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--dark-grey);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-.spin-btn{
-    width: 300px;
-    height: 50px;
-    background: green;
+.wheel::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: var(--powder-blue);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+
+.wheel .part {
+    position: absolute;
+    width: 50%;
+
+    clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+    transform-origin: 0 50%;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+
+}
+
+.icon {
+    font-family: "Material Icons";
+    color: #fff;
+    text-shadow: var(--dark-grey) 3px 3px;
+    font-size: 50px;
+    transform: rotate(-90deg);
+    margin-right: 20px;
+}
+
+.bigger-part{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+
+.bigger-part .icon{
+    margin-right: 40px;
+    font-family: "Material Icons";
+    color: #fff;
+    text-shadow: var(--dark-grey) 3px 3px;
+    font-size: 50px;
+    
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    background: var(--dark-grey);
+    clip-path: polygon(0% 50%, 60% 100%, 100% 100%, 100% 0%, 60% 0%);
+    border-radius: 20px;
+    width: 80px;
+    height: 45px;
+    transform: translateY(-50%);
+
+    z-index: 1;
+}
+
+.arrow::before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    clip-path: polygon(0% 50%, 60% 100%, 100% 100%, 100% 0%, 60% 0%);
+    width: 70%;
+    height: 70%;
+    background: var(--powder-blue);
+    transform: translate(30%, 20%);
+}
+
+.wheel-border {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: transparent;
+    top: 0;
+    border-radius: 50%;
+    background: var(--dark-grey);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .5);
+}
+
+.wheel-border::before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: "";
+    width: 480px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: var(--powder-blue);
+
+
+}
+
+.spin-btn {
+    width: 320px;
+    height: 60px;
+    margin-top: 50px;
+
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);
+    background: var(--dark-grey);
+    color: #d5d5d5;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    border-radius: 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    transition: all .3s, opacity 1s;
+}
+
+.spin-btn.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spin-btn:hover {
+    background: #343434;
+}
+
+.spin-btn:active {
+    transform: scale(.96);
+}
+
+.selected-game-container {
+    position: absolute;
+    background: var(--dark-grey);
+    width: 450px;
+    height: 250px;
+
+    bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);
+    transition: 1s;
+    opacity: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    color: #fff;
+    font-size: 30px;
+}
+
+.selected-game-container span {
+    font-size: 20px;
+    color: #444;
+}
+
+.selected-game-container .selected-game {
+    width: 80%;
+    height: 50px;
+    background: var(--dark-grey);
+    color: var(--powder-blue);
+    border-radius: 10px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 2px rgba(179, 205, 224, .6);
+}
+
+.selected-game-container.hide {
+    transform: translateY(200%);
+    opacity: 0;
+}
+.selected-game-container .play-game-btn{
+    width: 80%;
+    height: 50px;
+    background: var(--powder-blue);
+    color: var(--dark-grey);
+    font-weight: 800;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    box-shadow:  0 0 5px 2px rgba(255,255,255,.7);
+
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: .5s;
+}
+.selected-game-container .play-game-btn:hover{
+    background: rgba(179, 205, 224, .6);
+    color: rgba(60, 60, 60, .8);
+}
+
+.selected-game-container .play-game-btn:active{
+    transform: scale(.96);
 }

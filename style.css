@@ -27,7 +27,14 @@ body {
     overflow: hidden;
 }
 
-body>div:nth-child(2){
+body>section:nth-child(2){
     
     background: green;
+}
+
+body>section{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+    transition-delay: 1s;
 }
