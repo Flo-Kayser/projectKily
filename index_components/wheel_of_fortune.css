@@ -126,7 +126,7 @@
     width: 70%;
     height: 70%;
     background: var(--powder-blue);
-    transform: translate(30%, 20%);
+    transform: translate(29%, 22%);
 }
 
 .wheel-border {
@@ -192,9 +192,9 @@
     position: absolute;
     background: var(--dark-grey);
     width: 450px;
-    height: 250px;
+    height: 230px;
 
-    bottom: 50px;
+    bottom: 7px;
     border-radius: 20px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);
     transition: 1s;
