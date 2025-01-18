@@ -41,32 +41,25 @@ let data = JSON.parse(localStorage.getItem("data")) || [
     game: "spelling",
   },
   { keyword: "quiz", color: "#52796f", icon: "quiz", game: "spelling" },
-  {
-    keyword: "Kopf",
-    color: "#f4c7ab",
-    icon: "psychology_alt",
-    game: "spelling",
-  },
-  {
-    keyword: "swap",
-    color: "#b3cde0",
-    icon: "swap_vertical_circle",
-    game: "spelling",
-  },
-];
+  { keyword: "Kopf", color: "#f4c7ab", icon: "psychology_alt", game: "spelling" },
+  { keyword: "swap", color: "#b3cde0", icon: "swap_vertical_circle", game: "spelling" },
+]
 
-console.log(degrees);
-console.log(localStorage);
+console.log(degrees)
+console.log(localStorage)
 
 // create wheel of fortune
-let sectorAngle = 360 / count;
+let sectorAngle = 360 / count
+
+
+
 
 // Überprüfen, ob es der erste Besuch ist
 if (!localStorage.getItem("firstVisit")) {
-  // Es ist der erste Besuch: Local Storage zurücksetzen
-  localStorage.clear(); // Entfernt alle Daten aus dem Local Storage
+  
+  localStorage.clear(); 
 
-  // Markiere, dass der erste Besuch abgeschlossen ist
+  
   localStorage.setItem("firstVisit", "true");
 }
 
@@ -87,6 +80,10 @@ function loadSite() {
     });
   }, 1500);
 }
+
+
+
+
 
 function createWheel(count) {
   wheel.innerHTML = "";
