@@ -1,0 +1,47 @@
+.evaluation {
+    height: 300px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .3s;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.evaluation div span {
+    font-size: 250px;
+    font-weight: 900;
+    color: #AD4A28;
+    -webkit-text-stroke: 4px #434343;
+}
+
+.back-to-main-menu-btn {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #434343;
+    color: #434343;
+
+    cursor: pointer;
+    transition: .3s;
+
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-main-menu-btn:hover {
+    border-color: #282827;
+    color: #282827;
+    background: #434343;
+}
+
+.back-to-main-menu-btn:active {
+    transform: scale(.96);
+}

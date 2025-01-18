@@ -303,7 +303,7 @@ function gameEnd() {
     mainManuBtn.classList.add("back-to-main-menu-btn")
     mainManuBtn.textContent = "Nächstes Spiel"
     mistakesDisplay.appendChild(mainManuBtn)
-    localStorage.setItem("timelineMistakes", mistakes)
+    localStorage.setItem("timeline_mistakes", mistakes)
 
     mainManuBtn.addEventListener("click", () => {
         setTimeout(() => {

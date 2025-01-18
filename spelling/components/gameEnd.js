@@ -44,7 +44,7 @@ function updateMistakesDisplay(mistakes) {
     mainMenuBtn.classList.add("back-to-main-menu-btn")
     mainMenuBtn.textContent = "Nächstes Spiel"
     evaluationDisplay.appendChild(mainMenuBtn)
-    localStorage.setItem("spellingMistakes", mistakes)
+    localStorage.setItem("spelling_mistakes", mistakes)
 
     mainMenuBtn.addEventListener("click", () => {
         setTimeout(() => {

@@ -29,3 +29,6 @@ export const imgPlaceholder = document.querySelector(".img-placeholder")
 export const instruction = document.querySelector(".instruction")
 export const instructionBtn = document.querySelector(".instruction-btn")
 export const instructionTxt = document.querySelector("#instruction-txt")
+
+// evaluation
+export const evaluation = document.querySelector(".evaluation")

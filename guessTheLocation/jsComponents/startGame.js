@@ -1,5 +1,4 @@
 import { loader, pulseElement, task, taskContainer, taskHeading,userContainer,gameContainer,imgContainer,imgDisplay,imgPlaceholder, imgBorder} from "./DOMvariables.js";
-import { resetUI } from "./resetUI.js";
 
 export function startGame() {
     loader.classList.add("hide")
@@ -17,6 +16,7 @@ export function startGame() {
             gameContainer.style.transition = ".5s"
             userContainer.style.transition = ".5s"
             imgContainer.style.transition = ".5s"
+            gameContainer.style.display = ""
             
             setTimeout(() => {
                 gameContainer.classList.remove("hide")

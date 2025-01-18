@@ -3,6 +3,7 @@ import { resetUI, selectIndexImg } from "./jsComponents/resetUI.js";
 import { loadTask } from "./jsComponents/setupTxt.js";
 import { startGame } from "./jsComponents/startGame.js";
 import { checkAnswer } from "./jsComponents/checkAnswer.js";
+import { triggerGameEnd } from "./jsComponents/endGame.js";
 
 import { imgDisplay, imgBorder, submitBtns, userInputs, hidePlayerArea, nextBtn } from "./jsComponents/DOMvariables.js";
 
@@ -79,7 +80,7 @@ nextBtn.addEventListener("click", () => {
     }
 
 
-    if (roundCount !== 10) {
+    if (roundCount !== 5) {
         isDisabled = true
         roundIndex = 1
         roundCount++
@@ -92,6 +93,7 @@ nextBtn.addEventListener("click", () => {
         }, 3000);
 
     } else {
+        console.log("ende")
         triggerGameEnd()
     }
 })

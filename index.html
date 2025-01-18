@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Glücksrad</title>
+  </head>
+  <script>
+    window.debug = function (command = "") {
+      switch (command) {
+        case "":
+          localStorage.clear();
+          console.log("locale storage clear");
+          break;
+        case "tl":
+          window.location.href = "timeline/index.html";
+          break;
+        case "sp":
+          window.location.href = "spelling/index.html";
+          break;
+        case "gl":
+          window.location.href = "guessTheLocation/index.html";
+          break;
+        default:
+          console.log("Unbekannter Befehl:", command);
+      }
+    };
+  </script>
 
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <!-- <a href="timeline/index.html">timeline</a>
     <a href="spelling/index.html">spelling</a>
     <a href="guessTheLocation/index.html">locations</a> -->
 
     <section class="wheel-of-fortune">
-        <div class="wheel-container">
-            <div class="wheel">
-            </div>
-            <div class="arrow"></div>
-            <div class="wheel-border"></div>
-        </div>
-        <div class="spin-btn">Dreh das Rad!</div>
-        <div class="selected-game-container hide">
-            <span>Das ausgewählte Spiel ist:</span>
-            <div class="selected-game">sss</div>
-            <div class="play-game-btn">Spiel spielen</div>
-        </div>
+      <div class="wheel-container">
+        <div class="wheel"></div>
+        <div class="arrow"></div>
+        <div class="wheel-border"></div>
+      </div>
+      <div class="spin-btn">Dreh das Rad!</div>
+      <div class="selected-game-container hide">
+        <span>Das ausgewählte Spiel ist:</span>
+        <div class="selected-game">___</div>
+        <div class="play-game-btn">Spiel spielen</div>
+      </div>
     </section>
-    <section></section>
-</body>
-<script src="index.js"></script>
-
+    <section class="conclusion">
+      <div class="des">Eure Lösungsbuchstaben:</div>
+      <div class="overview">
+        
+      </div>
+      <div class="input">
+        <input type="text" autocomplete="off" id="conclusion-input" placeholder="Lösungswort eingeben">
+      </div>
+    </section>
+  </body>
+  <script type="module" src="index.js" ></script>
 </html>
