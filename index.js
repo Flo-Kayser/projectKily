@@ -231,7 +231,7 @@ function updateLetterFields() {
     const letterDisplay = document.createElement("div");
     letterDisplay.classList.add("letterDisplay");
 
-    if (mistakes > 5) {
+    if (mistakes > 5 || mistakes === null) {
       letterDisplay.classList.add("x");
       letters.shift();
     } else {

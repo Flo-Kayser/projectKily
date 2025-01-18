@@ -9,7 +9,7 @@ import { imgDisplay, imgBorder, submitBtns, userInputs, hidePlayerArea, nextBtn 
 
 // global variables
 let textData = {}
-let roundCount = 5
+let roundCount = 1
 let roundIndex = 1
 
 let isDisabled = false
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nextRound(roundCount, roundIndex)
     }, 500);
 
-    setTimeout(() => startGame(), 1000)
+    setTimeout(() => startGame(), 5000)
 
 })
 
@@ -80,7 +80,7 @@ nextBtn.addEventListener("click", () => {
     }
 
 
-    if (roundCount !== 5) {
+    if (roundCount !== 9) {
         isDisabled = true
         roundIndex = 1
         roundCount++

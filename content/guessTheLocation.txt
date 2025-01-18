@@ -7,12 +7,20 @@ Möchtet ihr jedoch beim dritten Versuch das Bild aus dem ersten Versuch erneut 
 
 answer_1 = paris|
 answer_2 = santa, santa fe, santa fee, santafe, santafee, fe, santa-fe|
-answer_3 = europapark, rust, europapark-rust, europapark rust|
-answer_4 = lincoln, lincon, lincoln lawyer, lincon lawyer, micky, micky haller, mickey, mickey haller,mick,mick haller, haller, lincoln anwalt|
+answer_3 = europapark, rust, europapark-rust, europapark rust, europaparkrust|
+answer_4 = lincoln, lincon, lincoln lawyer, lincon lawyer, micky, micky haller, mickey, mickey haller, mick, mick haller, haller, lincoln anwalt|
 answer_5 = tenerifa, teneriffa, teneiffa, teneriffa|
+answer_6 = helene, helene fischer, fischer, helenefischer|
+answer_7 = altkötzschenbroda, altkötzchenbroda, altkötschenbroda|
+answer_8 = james, bond, james bond, jamesbond|
+answer_9 = dresden|
 
 round_1 = Paris|
 round_2 = Santa Fe|
 round_3 = Europapark Rust|
 round_4 = Lincoln Lawyer|
 round_5 = Teneriffa|
+round_6 = Helene Fischer|
+round_7 = Altkötzschenbroda|
+round_8 = James Bond|
+round_9 = Dresden|
